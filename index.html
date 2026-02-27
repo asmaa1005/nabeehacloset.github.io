@@ -946,7 +946,6 @@ nav::before {
 .cod-note-icon { color: var(--gold); font-size: 0.8rem; margin-top: -1px; }
 
 /* ==================== ADMIN ==================== */
-.admin-link { color: var(--gold) !important; }
 .admin-login-scrim {
   display:none; position:fixed; inset:0; z-index:1000;
   background:rgba(10,8,5,0.85); backdrop-filter:blur(10px);
@@ -1280,10 +1279,9 @@ nav::before {
     <a class="nav-link" onclick="showPage('shop')" data-page="shop">Shop</a>
     <a class="nav-link" onclick="showPage('about')" data-page="about">About</a>
     <a class="nav-link" onclick="showPage('contact')" data-page="contact">Contact</a>
-    <a class="nav-link admin-link" onclick="showAdminLogin()" data-page="admin">⚙ Admin</a>
   </div>
   <div class="nav-center">
-    <a class="logo" onclick="showPage('home')">NABEEHA'S CLOSET</a>
+    <a class="logo" onclick="showPage('home')">NABEEHA CLOSET</a>
   </div>
   <div class="nav-right">
     <button class="cart-trigger" onclick="toggleCart()">
@@ -1303,7 +1301,7 @@ nav::before {
 
   <div class="hero">
     <div class="hero-left">
-      <p class="hero-season">All Seasons</p>
+      <p class="hero-season">Spring / Summer 2025</p>
       <h1 class="hero-headline">
         <span class="line">Wear</span>
         <span class="line"><span class="word-italic">nothing</span></span>
@@ -1314,7 +1312,21 @@ nav::before {
         <button class="btn-fill" onclick="showPage('shop')"><span>Explore Collection</span></button>
         <a class="btn-outline" onclick="showPage('about')">Our Story →</a>
       </div>
-      
+      <div class="hero-metrics">
+        <div>
+          <p class="metric-val">12</p>
+          <p class="metric-label">Pieces this season</p>
+        </div>
+        <div>
+          <p class="metric-val">200</p>
+          <p class="metric-label">Units per style</p>
+        </div>
+        <div>
+          <p class="metric-val">8</p>
+          <p class="metric-label">Partners worldwide</p>
+        </div>
+      </div>
+    </div>
     <div class="hero-right">
       <div class="hero-bg-text">NABEEHA</div>
       <div class="hero-visual-content">
@@ -1335,7 +1347,7 @@ nav::before {
             <path d="M98 80 L98 140" stroke="#0a0805" stroke-width="0.5" stroke-dasharray="3 4" opacity="0.4"/>
           </svg>
         </div>
-        <div class="hero-tag">Nabeeha's Closet</div>
+        <div class="hero-tag">Nabeeha Closet — SS2025</div>
       </div>
       <div class="hero-scroll-hint">
         <div class="scroll-line"></div>
@@ -1349,10 +1361,14 @@ nav::before {
     <div class="strip-track">
       <span class="strip-item"><span class="strip-dot"></span>Flat PKR 200 shipping on all orders</span>
       <span class="strip-item"><span class="strip-dot"></span>Small batch — 200 units per style</span>
+      <span class="strip-item"><span class="strip-dot"></span>Lifetime repair promise</span>
       <span class="strip-item"><span class="strip-dot"></span>Organic & deadstock fabrics</span>
+      <span class="strip-item"><span class="strip-dot"></span>SS 2025 Collection live now</span>
       <span class="strip-item"><span class="strip-dot"></span>Flat PKR 200 shipping on all orders</span>
       <span class="strip-item"><span class="strip-dot"></span>Small batch — 200 units per style</span>
+      <span class="strip-item"><span class="strip-dot"></span>Lifetime repair promise</span>
       <span class="strip-item"><span class="strip-dot"></span>Organic & deadstock fabrics</span>
+      <span class="strip-item"><span class="strip-dot"></span>SS 2025 Collection live now</span>
     </div>
   </div>
 
@@ -1890,6 +1906,14 @@ renderFeatured();
 renderShop();
 updateCart();
 
+// Secret admin access: Ctrl + Shift + A
+document.addEventListener('keydown', e => {
+  if (e.ctrlKey && e.shiftKey && e.key === 'A') {
+    e.preventDefault();
+    showAdminLogin();
+  }
+});
+
 // ==================== ADMIN ====================
 const ADMIN_PW = 'nabeeha2025';
 let editingId = null;
@@ -1900,6 +1924,19 @@ function showAdminLogin() {
   document.getElementById('adminLoginScrim').classList.add('open');
   setTimeout(() => document.getElementById('adminPwInput').focus(), 100);
 }
+// Secret URL access: visit yoursite.com/#nabeeha-admin to open admin
+(function checkSecretHash() {
+  if (window.location.hash === '#nabeeha-admin') {
+    window.history.replaceState(null, '', window.location.pathname);
+    showAdminLogin();
+  }
+})();
+window.addEventListener('hashchange', () => {
+  if (window.location.hash === '#nabeeha-admin') {
+    window.history.replaceState(null, '', window.location.pathname);
+    showAdminLogin();
+  }
+});
 function closeAdminLogin() {
   document.getElementById('adminLoginScrim').classList.remove('open');
   document.getElementById('adminPwInput').value = '';

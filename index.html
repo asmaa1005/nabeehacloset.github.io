@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nabeeha's Closet — Modern Clothing</title>
+<title>Nabeeha Closet — Modern Clothing</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -889,8 +889,11 @@ nav::before {
 
 /* ==================== RESPONSIVE ==================== */
 @media (max-width: 960px) {
-  nav { padding: 1.2rem 1.5rem; }
-  .nav-left .nav-link:nth-child(n+3) { display: none; }
+  nav { padding: 1rem 1.2rem; grid-template-columns: 1fr auto; }
+  .nav-center { display: none; }
+  .nav-left { gap: 1.2rem; flex-wrap: nowrap; overflow: hidden; }
+  .nav-left .nav-link { font-size: 0.58rem; letter-spacing: 0.1em; }
+  .nav-left .nav-link:nth-child(n+4) { display: none; }
   .hero { grid-template-columns: 1fr; }
   .hero-right { display: none; }
   .hero-left { padding: 3.5rem 2rem; }
@@ -1281,7 +1284,7 @@ nav::before {
     <a class="nav-link" onclick="showPage('contact')" data-page="contact">Contact</a>
   </div>
   <div class="nav-center">
-    <a class="logo" onclick="showPage('home')">NABEEHA'S CLOSET</a>
+    <a class="logo" onclick="showPage('home')">NABEEHA CLOSET</a>
   </div>
   <div class="nav-right">
     <button class="cart-trigger" onclick="toggleCart()">
@@ -1301,7 +1304,7 @@ nav::before {
 
   <div class="hero">
     <div class="hero-left">
-      <p class="hero-season">All Seasons</p>
+      <p class="hero-season">Spring / Summer 2025</p>
       <h1 class="hero-headline">
         <span class="line">Wear</span>
         <span class="line"><span class="word-italic">nothing</span></span>
@@ -1312,7 +1315,20 @@ nav::before {
         <button class="btn-fill" onclick="showPage('shop')"><span>Explore Collection</span></button>
         <a class="btn-outline" onclick="showPage('about')">Our Story →</a>
       </div>
-     
+      <div class="hero-metrics">
+        <div>
+          <p class="metric-val">12</p>
+          <p class="metric-label">Pieces this season</p>
+        </div>
+        <div>
+          <p class="metric-val">200</p>
+          <p class="metric-label">Units per style</p>
+        </div>
+        <div>
+          <p class="metric-val">8</p>
+          <p class="metric-label">Partners worldwide</p>
+        </div>
+      </div>
     </div>
     <div class="hero-right">
       <div class="hero-bg-text">NABEEHA</div>
@@ -1334,7 +1350,7 @@ nav::before {
             <path d="M98 80 L98 140" stroke="#0a0805" stroke-width="0.5" stroke-dasharray="3 4" opacity="0.4"/>
           </svg>
         </div>
-        <div class="hero-tag">Nabeeha's Closet — 2026</div>
+        <div class="hero-tag">Nabeeha Closet — SS2025</div>
       </div>
       <div class="hero-scroll-hint">
         <div class="scroll-line"></div>
@@ -1347,9 +1363,15 @@ nav::before {
   <div class="featured-strip">
     <div class="strip-track">
       <span class="strip-item"><span class="strip-dot"></span>Flat PKR 200 shipping on all orders</span>
+      <span class="strip-item"><span class="strip-dot"></span>Small batch — 200 units per style</span>
+      <span class="strip-item"><span class="strip-dot"></span>Lifetime repair promise</span>
       <span class="strip-item"><span class="strip-dot"></span>Organic & deadstock fabrics</span>
+      <span class="strip-item"><span class="strip-dot"></span>SS 2025 Collection live now</span>
       <span class="strip-item"><span class="strip-dot"></span>Flat PKR 200 shipping on all orders</span>
+      <span class="strip-item"><span class="strip-dot"></span>Small batch — 200 units per style</span>
+      <span class="strip-item"><span class="strip-dot"></span>Lifetime repair promise</span>
       <span class="strip-item"><span class="strip-dot"></span>Organic & deadstock fabrics</span>
+      <span class="strip-item"><span class="strip-dot"></span>SS 2025 Collection live now</span>
     </div>
   </div>
 
@@ -1386,16 +1408,16 @@ nav::before {
   <div class="about-top">
     <div class="about-left">
       <div class="about-bg-num">2019</div>
-      <p class="about-tag">Est. 2026 – Faisalabad, Pakistan</p>
-      <h2 class="about-main-title">Timeless pieces —<br><em>thoughtfully made</em></h2>
+      <p class="about-tag">Est. 2019 — Lisbon, Portugal</p>
+      <h2 class="about-main-title">We make clothes that<br><em>outlast trends.</em></h2>
     </div>
     <div class="about-right">
       <p class="about-body">
-        NABEEHA's CLOSET was founded from a single conviction: that <strong>clothing should be honest</strong>. No fast fashion cycles. No trend-chasing. Just pieces designed with the patience and craft they deserve.
+        NABEEHA CLOSET was founded from a single conviction: that <strong>clothing should be honest</strong>. No fast fashion cycles. No trend-chasing. Just pieces designed with the patience and craft they deserve.
       </p>
       <div class="divider"></div>
       <p class="about-body">
-       NABEEHA’S CLOSET was built with one simple belief:<strong>every girl deserves to feel elegant without overpaying.</strong> No mass production. No copied designs. Just thoughtfully designed pieces made in limited quantities.
+        We work with a small network of artisan manufacturers across Portugal and Japan, chosen for their commitment to traditional techniques and ethical practices. <strong>Every garment passes through fewer than eight hands</strong> before it reaches you.
       </p>
       <div class="divider"></div>
       <p class="about-body">
@@ -1406,23 +1428,23 @@ nav::before {
   <div class="pillars">
     <div class="pillar">
       <p class="pillar-num">01 —</p>
-      <h3 class="pillar-title">Limited Pieces</h3>
-      <p class="pillar-text">We produce in small quantities so your outfit feels exclusive, not common.</p>
+      <h3 class="pillar-title">Slow Fashion</h3>
+      <p class="pillar-text">Two collections per year, not four. We'd rather get it right than get it out quickly.</p>
     </div>
     <div class="pillar">
       <p class="pillar-num">02 —</p>
-      <h3 class="pillar-title">Handpicked Details</h3>
-      <p class="pillar-text">From fabric selection to embellishments, every detail is chosen carefully.</p>
+      <h3 class="pillar-title">Ethical Production</h3>
+      <p class="pillar-text">All manufacturing partners are audited annually. Living wages, safe conditions, no exceptions.</p>
     </div>
     <div class="pillar">
       <p class="pillar-num">03 —</p>
-      <h3 class="pillar-title">Quality First</h3>
-      <p class="pillar-text">We focus on neat stitching, comfortable fabric, and long-lasting wear.</p>
+      <h3 class="pillar-title">Sustainable Materials</h3>
+      <p class="pillar-text">90% of our fabrics are organic, recycled, or deadstock. The other 10% is something we're working on.</p>
     </div>
     <div class="pillar">
       <p class="pillar-num">04 —</p>
-      <h3 class="pillar-title">Growing With You</h3>
-      <p class="pillar-text">Nabeeha’s Closet is a growing brand — and every customer becomes part of our journey.</p>
+      <h3 class="pillar-title">Lifetime Repairs</h3>
+      <p class="pillar-text">Every piece comes with a lifetime repair promise. Send it back, we'll fix it. Free, forever.</p>
     </div>
   </div>
 </section>
@@ -1436,7 +1458,15 @@ nav::before {
       <div class="contact-list">
         <div class="cl-item">
           <span class="cl-label">Email</span>
-          <span class="cl-val">nabeehashakeel307@gmail.com</span>
+          <span class="cl-val">hello@nabeeha-closet.com</span>
+        </div>
+        <div class="cl-item">
+          <span class="cl-label">Studio</span>
+          <span class="cl-val">Studio 14, The Warehouse<br>Lisbon, Portugal 1200-109</span>
+        </div>
+        <div class="cl-item">
+          <span class="cl-label">Hours</span>
+          <span class="cl-val">Mon – Fri, 10:00 – 18:00 WET</span>
         </div>
         <div class="cl-item">
           <span class="cl-label">Response</span>
@@ -1605,13 +1635,17 @@ nav::before {
 
 <script>
 // ==================== DATA ====================
-// Products stored in localStorage
+// Products embedded in the file — visible to ALL visitors
+// Edit NABEEHA_PRODUCTS below, or use Admin Panel then re-upload the file
+const NABEEHA_PRODUCTS = []; // <- your products live here
+
 function loadProducts() {
-  const saved = localStorage.getItem('nabeeha_products');
-  return saved ? JSON.parse(saved) : [];
+  // Admin edits are stored in localStorage for preview only
+  const adminEdits = localStorage.getItem('nabeeha_admin_products');
+  return adminEdits ? JSON.parse(adminEdits) : NABEEHA_PRODUCTS;
 }
 function saveProducts(prods) {
-  localStorage.setItem('nabeeha_products', JSON.stringify(prods));
+  localStorage.setItem('nabeeha_admin_products', JSON.stringify(prods));
 }
 let products = loadProducts();
 
@@ -2132,6 +2166,30 @@ function showToast(msg) {
   setTimeout(() => t.classList.remove('show'), 3000);
 }
 
+function exportSite() {
+  const prods = loadProducts();
+  if (prods.length === 0) { showToast('⚠ No products to export yet'); return; }
+  
+  // Read the current HTML and inject the products into NABEEHA_PRODUCTS
+  const xhr = new XMLHttpRequest();
+  xhr.open('GET', window.location.href, true);
+  xhr.onload = function() {
+    let html = xhr.responseText;
+    const productsJson = JSON.stringify(prods, null, 2);
+    html = html.replace(
+      /const NABEEHA_PRODUCTS = \[.*?\]; \/\/ <- your products live here/s,
+      `const NABEEHA_PRODUCTS = ${productsJson}; // <- your products live here`
+    );
+    const blob = new Blob([html], { type: 'text/html' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'nabeeha-closet.html';
+    a.click();
+    showToast('✓ File downloaded! Re-upload to Netlify to publish.');
+  };
+  xhr.send();
+}
+
 
 // ==================== GALLERY ====================
 const galleryState = {}; // prodId -> currentIndex
@@ -2238,7 +2296,22 @@ function closeProductDetail() {
         <h2 class="admin-title">Admin Panel</h2>
         <p class="admin-subtitle">Nabeeha Closet — Product Management</p>
       </div>
-      <button class="admin-logout" onclick="adminLogout()">Logout</button>
+      <div style="display:flex;gap:0.8rem;align-items:center">
+        <button class="admin-logout" onclick="exportSite()" style="border-color:var(--gold);color:var(--gold)">⬇ Download Updated Site</button>
+        <button class="admin-logout" onclick="adminLogout()">Logout</button>
+      </div>
+    </div>
+    <div style="background:rgba(184,146,42,0.08);border:1px solid rgba(184,146,42,0.3);padding:1.2rem 1.5rem;margin-bottom:2rem;display:flex;gap:1rem;align-items:flex-start">
+      <span style="font-size:1.2rem;flex-shrink:0">💡</span>
+      <div>
+        <p style="font-family:var(--mono);font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.3rem">How to publish products</p>
+        <p style="font-family:var(--sans);font-size:0.85rem;color:var(--muted);line-height:1.6">
+          1. Add your products using the form below.<br>
+          2. Click <strong style="color:var(--ink)">⬇ Download Updated Site</strong> button above.<br>
+          3. Go to <strong style="color:var(--ink)">Netlify → Deploys → drag the downloaded file</strong> to publish.<br>
+          Products will then be visible to everyone!
+        </p>
+      </div>
     </div>
     <div class="admin-grid">
 
